@@ -1,1 +1,1 @@
-"# IMDB Database" 
+# IMDB Database
