@@ -1,14 +1,14 @@
 
-drop table MovieDirectors
+drop table MovieDirector
 
-create table MovieDirectors
+create table MovieDirector
 (
 	movieId int references Movie(movieId)
 	, personId int references Person(personId)
 	primary key (movieId, personId)
 )
 
-insert into MovieDirectors(movieId, personId)
+insert into MovieDirector(movieId, personId)
 select m.movieId, p.personId
 from Staging as s
 join Movie as m on m.title = s.Series_Title and m.posterLink = s.Poster_Link
